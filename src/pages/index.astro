@@ -148,18 +148,20 @@ const base = import.meta.env.BASE_URL;
   <div class="modal-backdrop"></div>
 
   <div class="modal-content" role="dialog" aria-modal="true">
-    <button
-      id="modal-close"
-      class="modal-close"
-      type="button"
-      aria-label="Cerrar"
-    >
-      ×
-    </button>
+    
 
-    <div class="modal-title-wrapper">
-      <h3 id="modal-title"></h3>
-    </div>
+   <div class="modal-title-wrapper">
+  <h3 id="modal-title"></h3>
+
+  <button
+    id="modal-close"
+    class="modal-close"
+    type="button"
+    aria-label="Cerrar"
+  >
+    ×
+  </button>
+</div>
 
     <div class="modal-image-area">
       <button
@@ -510,11 +512,11 @@ const base = import.meta.env.BASE_URL;
       white-space: nowrap;
     }
 	.logo-horizontal {
-  display: none;
+  display: block;
 }
 
 .logo-isotipo {
-  display: block;
+  display: none;
 }
   }
     .modal {
@@ -545,22 +547,24 @@ const base = import.meta.env.BASE_URL;
     z-index: 1;
   }
 
-  .modal-close {
+    .modal-close {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
     z-index: 3;
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
     border: 0;
     background: rgba(0, 0, 0, 0.65);
     color: white;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1;
     cursor: pointer;
   }
 
-  .modal-title-wrapper {
+    .modal-title-wrapper {
+    position: relative;
     width: 100%;
     flex-shrink: 0;
     padding: 8px 55px 12px;
@@ -569,8 +573,10 @@ const base = import.meta.env.BASE_URL;
 
   .modal-title-wrapper h3 {
     margin: 0;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
+    line-height: 1.15;
+    text-transform: uppercase;
   }
 
   .modal-image-area {
@@ -705,28 +711,43 @@ const base = import.meta.env.BASE_URL;
     overflow: hidden;
   }
 
-  @media (max-width: 700px) {
+      @media (max-width: 700px) {
     .modal-content {
       width: 100vw;
       height: 100dvh;
       margin: 0;
       overflow: hidden;
+      justify-content: center;
     }
 
     .modal-title-wrapper {
-      padding: 14px 50px 10px;
+      flex-shrink: 0;
+      padding: 8px 50px 8px;
     }
 
     .modal-title-wrapper h3 {
-      font-size: 18px;
+      font-size: 20px;
+      line-height: 1.15;
     }
 
     .modal-image-area {
+      flex: 0 1 auto;
       min-height: 0;
+      width: 100%;
     }
 
     .modal-image-wrapper {
+      width: 100%;
+      height: auto;
+      min-height: 0;
       padding: 0 45px;
+    }
+
+    .modal-image-wrapper img {
+      max-width: 100%;
+      max-height: calc(100dvh - 170px);
+      width: auto;
+      height: auto;
     }
 
     .modal-arrow {
@@ -736,8 +757,9 @@ const base = import.meta.env.BASE_URL;
     }
 
     .modal-footer {
-      padding: 10px 20px 18px;
-      gap: 12px;
+      flex-shrink: 0;
+      padding: 8px 20px 10px;
+      gap: 8px;
     }
 
     .modal-actions {
@@ -746,9 +768,11 @@ const base = import.meta.env.BASE_URL;
 
     .modal-whatsapp,
     .modal-share {
-      padding: 10px 14px;
+      padding: 9px 14px;
       font-size: 12px;
     }
+
+    
   }
 </style>
 
