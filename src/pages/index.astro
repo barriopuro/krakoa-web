@@ -5,6 +5,8 @@ const categories = [
   { id: "todos", name: "Todos" },
   ...catalogo.categories,
 ];
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -14,7 +16,7 @@ const categories = [
   <meta name="viewport" content="width=device-width" />
 
   <title>KRAKOA | REMERAS</title>
-  <link rel="icon" type="image/png" href="/logos/krakoalogo-isotipo.png" />
+  <link rel="icon" type="image/png" href={`${base}logos/krakoalogo-isotipo.png`} />
 
   <meta
     name="description"
@@ -46,13 +48,13 @@ const categories = [
       <a href="/" class="brand" aria-label="KRAKOA">
   <img
     class="logo-horizontal"
-    src="/logos/krakoalogo-horizontal.png"
+    src={`${base}logos/krakoalogo-horizontal.png`}
     alt="KRAKOA"
   />
 
   <img
     class="logo-isotipo"
-    src="/logos/krakoalogo-isotipo.png"
+    src={`${base}logos/krakoalogo-isotipo.png`}
     alt=""
     aria-hidden="true"
   />
@@ -116,7 +118,7 @@ const categories = [
                 <button class="product-button" type="button">
                   <div class="product-image">
                     <img
-                      src={product.modelo}
+                      src={`${base}${product.modelo.slice(1)}`}
                       alt={`Remera ${product.name}`}
                       loading="lazy"
                     />
@@ -771,11 +773,11 @@ modal.style.setProperty("--category-color", categoryColor);
         label: "Remera",
       },
       {
-        src: "/talles/oversize.jpg",
+        src: `${base}talles/oversize.jpg`,
         label: "Talles Oversize",
       },
       {
-        src: "/talles/regular.jpg",
+        src: `${base}talles/regular.jpg`,
         label: "Talles Regular",
       },
     ];
