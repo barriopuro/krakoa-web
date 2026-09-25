@@ -500,6 +500,22 @@
       "categoryName": "Videojuegos",
       "modelo": "/catalogo/videojuegos/god-of-war/modelo.webp",
       "remera": "/catalogo/videojuegos/god-of-war/remera.webp"
+    },
+    {
+      "id": "raiden-mortal-kombat",
+      "name": "Raiden Mortal Kombat",
+      "category": "videojuegos",
+      "categoryName": "Videojuegos",
+      "modelo": "/catalogo/videojuegos/raiden-mortal-kombat/modelo.webp",
+      "remera": "/catalogo/videojuegos/raiden-mortal-kombat/remera.webp"
+    },
+    {
+      "id": "sub-zero-mortal-kombat",
+      "name": "Sub Zero Mortal Kombat",
+      "category": "videojuegos",
+      "categoryName": "Videojuegos",
+      "modelo": "/catalogo/videojuegos/sub-zero-mortal-kombat/modelo.webp",
+      "remera": "/catalogo/videojuegos/sub-zero-mortal-kombat/remera.webp"
     }
   ]
 }
