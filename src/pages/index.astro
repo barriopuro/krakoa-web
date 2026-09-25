@@ -757,10 +757,7 @@ modal.style.setProperty("--category-color", categoryColor);
 
     const remera = modelo.replace("/modelo.", "/remera.");
 
-    const siteBase = modelo.substring(
-  0,
-  modelo.indexOf("/catalogo/")
-);
+    
 
     currentImages = [
       {
@@ -772,11 +769,11 @@ modal.style.setProperty("--category-color", categoryColor);
         label: "Remera",
       },
       {
-        src: `${sitebase}/talles/oversize.jpg`,
+        src: new URL("talles/oversize.jpg", document.baseURI).href,
         label: "Talles Oversize",
       },
       {
-        src: `${sitebase}/talles/regular.jpg`,
+        src: new URL("talles/regular.jpg", document.baseURI).href,
         label: "Talles Regular",
       },
     ];
