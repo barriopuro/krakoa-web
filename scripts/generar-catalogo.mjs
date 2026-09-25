@@ -74,6 +74,12 @@ if (!fs.existsSync(catalogoDir)) {
 fs.rmSync(publicCatalogoDir, { recursive: true, force: true });
 fs.cpSync(catalogoDir, publicCatalogoDir, { recursive: true });
 
+const tallesDir = path.join(root, "talles");
+const publicTallesDir = path.join(root, "public", "talles");
+
+fs.rmSync(publicTallesDir, { recursive: true, force: true });
+fs.cpSync(tallesDir, publicTallesDir, { recursive: true });
+
 fs.mkdirSync(outputDir, { recursive: true });
 
 const categories = [];
