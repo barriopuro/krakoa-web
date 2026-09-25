@@ -3,6 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const catalogoDir = path.join(root, "catalogo");
+const publicCatalogoDir = path.join(root, "public", "catalogo");
 const outputDir = path.join(root, "src", "data");
 const outputFile = path.join(outputDir, "catalogo.json");
 
@@ -70,6 +71,8 @@ if (!fs.existsSync(catalogoDir)) {
   console.error("ERROR: No existe la carpeta catalogo.");
   process.exit(1);
 }
+fs.rmSync(publicCatalogoDir, { recursive: true, force: true });
+fs.cpSync(catalogoDir, publicCatalogoDir, { recursive: true });
 
 fs.mkdirSync(outputDir, { recursive: true });
 
