@@ -262,6 +262,14 @@
       "remera": "/catalogo/cine-series/joker-batman-dark-knight/remera.webp"
     },
     {
+      "id": "karate-kid",
+      "name": "Karate Kid",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/karate-kid/modelo.webp",
+      "remera": "/catalogo/cine-series/karate-kid/remera.webp"
+    },
+    {
       "id": "monstars-space-jam",
       "name": "Monstars Space Jam",
       "category": "cine-series",
