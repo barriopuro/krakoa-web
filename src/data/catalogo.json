@@ -430,6 +430,14 @@
       "remera": "/catalogo/musica/cypress-hill/remera.webp"
     },
     {
+      "id": "dano",
+      "name": "Dano",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/dano/modelo.webp",
+      "remera": "/catalogo/musica/dano/remera.webp"
+    },
+    {
       "id": "foo-fighters",
       "name": "Foo Fighters",
       "category": "musica",
