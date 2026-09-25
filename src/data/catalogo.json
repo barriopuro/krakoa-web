@@ -294,6 +294,38 @@
       "remera": "/catalogo/cine-series/stranger-things/remera.webp"
     },
     {
+      "id": "deadpool",
+      "name": "Deadpool",
+      "category": "comics",
+      "categoryName": "Comics",
+      "modelo": "/catalogo/comics/deadpool/modelo.webp",
+      "remera": "/catalogo/comics/deadpool/remera.webp"
+    },
+    {
+      "id": "dr-doom",
+      "name": "Dr Doom",
+      "category": "comics",
+      "categoryName": "Comics",
+      "modelo": "/catalogo/comics/dr-doom/modelo.webp",
+      "remera": "/catalogo/comics/dr-doom/remera.webp"
+    },
+    {
+      "id": "the-joker",
+      "name": "The Joker",
+      "category": "comics",
+      "categoryName": "Comics",
+      "modelo": "/catalogo/comics/the-joker/modelo.webp",
+      "remera": "/catalogo/comics/the-joker/remera.webp"
+    },
+    {
+      "id": "x-men",
+      "name": "X Men",
+      "category": "comics",
+      "categoryName": "Comics",
+      "modelo": "/catalogo/comics/x-men/modelo.webp",
+      "remera": "/catalogo/comics/x-men/remera.webp"
+    },
+    {
       "id": "ayrton-senna",
       "name": "Ayrton Senna",
       "category": "deportes",
@@ -492,6 +524,22 @@
       "categoryName": "Otros",
       "modelo": "/catalogo/otros/las-malvinas-son-argentinas/modelo.webp",
       "remera": "/catalogo/otros/las-malvinas-son-argentinas/remera.webp"
+    },
+    {
+      "id": "pulpo",
+      "name": "Pulpo",
+      "category": "otros",
+      "categoryName": "Otros",
+      "modelo": "/catalogo/otros/pulpo/modelo.webp",
+      "remera": "/catalogo/otros/pulpo/remera.webp"
+    },
+    {
+      "id": "ramen-godzilla",
+      "name": "Ramen Godzilla",
+      "category": "otros",
+      "categoryName": "Otros",
+      "modelo": "/catalogo/otros/ramen-godzilla/modelo.webp",
+      "remera": "/catalogo/otros/ramen-godzilla/remera.webp"
     },
     {
       "id": "god-of-war",
