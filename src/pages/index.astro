@@ -664,16 +664,24 @@ const base = import.meta.env.BASE_URL;
     overflow: hidden;
   }
 
-  @media (max-width: 700px) {
+    @media (max-width: 700px) {
     .modal-content {
       width: 100vw;
       height: 100vh;
       margin: 0;
+      overflow: hidden;
     }
 
     .modal-image-wrapper {
       height: calc(100% - 85px);
+      min-height: 0;
+      flex-shrink: 1;
       padding: 50px 45px 10px;
+    }
+
+    .modal-image-wrapper img {
+      max-height: 100%;
+      max-width: 100%;
     }
 
     .modal-arrow {
@@ -684,6 +692,8 @@ const base = import.meta.env.BASE_URL;
 
     .modal-footer {
       height: 85px;
+      min-height: 85px;
+      flex-shrink: 0;
       padding: 10px 45px 15px;
     }
 
