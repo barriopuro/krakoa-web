@@ -1,11 +1,27 @@
 import fs from "node:fs";
 import path from "node:path";
+import sharp from "sharp";
 
 const root = process.cwd();
 const catalogoDir = path.join(root, "catalogo");
 const publicCatalogoDir = path.join(root, "public", "catalogo");
 const outputDir = path.join(root, "src", "data");
 const outputFile = path.join(outputDir, "catalogo.json");
+
+const optimizedCatalogoDir = path.join(
+  root,
+  "public",
+  "catalogo"
+);
+
+async function optimizeImage(sourcePath, destinationPath) {
+  await sharp(sourcePath)
+    .webp({
+      quality: 82,
+      effort: 4,
+    })
+    .toFile(destinationPath);
+}
 
 const imageExtensions = [".jpg", ".jpeg", ".png", ".webp"];
 
@@ -72,13 +88,75 @@ if (!fs.existsSync(catalogoDir)) {
   process.exit(1);
 }
 fs.rmSync(publicCatalogoDir, { recursive: true, force: true });
-fs.cpSync(catalogoDir, publicCatalogoDir, { recursive: true });
+fs.mkdirSync(publicCatalogoDir, { recursive: true });
+
+async function processCatalogoImages() {
+  const files = fs.readdirSync(catalogoDir, { recursive: true });
+
+  for (const relativeFile of files) {
+    const sourcePath = path.join(catalogoDir, relativeFile);
+
+    if (!fs.statSync(sourcePath).isFile()) {
+      continue;
+    }
+
+    const extension = path.extname(relativeFile).toLowerCase();
+
+    if (!imageExtensions.includes(extension)) {
+      continue;
+    }
+
+    const relativeWebp = relativeFile.replace(
+      new RegExp(`${extension}$`, "i"),
+      ".webp"
+    );
+
+    const destinationPath = path.join(
+      publicCatalogoDir,
+      relativeWebp
+    );
+
+    fs.mkdirSync(path.dirname(destinationPath), {
+      recursive: true,
+    });
+
+    await optimizeImage(sourcePath, destinationPath);
+  }
+}
+
+await processCatalogoImages();
 
 const tallesDir = path.join(root, "talles");
 const publicTallesDir = path.join(root, "public", "talles");
 
 fs.rmSync(publicTallesDir, { recursive: true, force: true });
-fs.cpSync(tallesDir, publicTallesDir, { recursive: true });
+fs.mkdirSync(publicTallesDir, { recursive: true });
+
+const tallesFiles = fs.readdirSync(tallesDir);
+
+for (const file of tallesFiles) {
+  const sourcePath = path.join(tallesDir, file);
+
+  if (!fs.statSync(sourcePath).isFile()) {
+    continue;
+  }
+
+  const extension = path.extname(file).toLowerCase();
+
+  if (!imageExtensions.includes(extension)) {
+    continue;
+  }
+
+  const webpFile = file.replace(
+    new RegExp(`${extension}$`, "i"),
+    ".webp"
+  );
+
+  await optimizeImage(
+    sourcePath,
+    path.join(publicTallesDir, webpFile)
+  );
+}
 
 fs.mkdirSync(outputDir, { recursive: true });
 
@@ -135,8 +213,8 @@ categories.push({
       name: formatName(productId),
       category: categoryId,
       categoryName: config?.name ?? formatName(categoryId),
-      modelo: `/catalogo/${categoryId}/${productId}/${modelo}`,
-      remera: `/catalogo/${categoryId}/${productId}/${remera}`,
+      modelo: `/catalogo/${categoryId}/${productId}/${modelo.replace(/\.[^.]+$/, ".webp")}`,
+remera: `/catalogo/${categoryId}/${productId}/${remera.replace(/\.[^.]+$/, ".webp")}`,
     });
   }
 }
