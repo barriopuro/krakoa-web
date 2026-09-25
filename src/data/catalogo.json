@@ -206,12 +206,92 @@
       "remera": "/catalogo/anime/vegeta-dragon-ball-z/remera.webp"
     },
     {
+      "id": "aku-samurai-jack",
+      "name": "Aku Samurai Jack",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/aku-samurai-jack/modelo.webp",
+      "remera": "/catalogo/cine-series/aku-samurai-jack/remera.webp"
+    },
+    {
+      "id": "coraje-el-perro-cobarde",
+      "name": "Coraje El Perro Cobarde",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/coraje-el-perro-cobarde/modelo.webp",
+      "remera": "/catalogo/cine-series/coraje-el-perro-cobarde/remera.webp"
+    },
+    {
+      "id": "darth-vader-star-wars",
+      "name": "Darth Vader Star Wars",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/darth-vader-star-wars/modelo.webp",
+      "remera": "/catalogo/cine-series/darth-vader-star-wars/remera.webp"
+    },
+    {
+      "id": "ed-edd-y-eddy",
+      "name": "Ed Edd Y Eddy",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/ed-edd-y-eddy/modelo.webp",
+      "remera": "/catalogo/cine-series/ed-edd-y-eddy/remera.webp"
+    },
+    {
+      "id": "el-señor-de-los-anillos",
+      "name": "El SeñOr De Los Anillos",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/el-señor-de-los-anillos/modelo.webp",
+      "remera": "/catalogo/cine-series/el-señor-de-los-anillos/remera.webp"
+    },
+    {
+      "id": "it",
+      "name": "It",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/it/modelo.webp",
+      "remera": "/catalogo/cine-series/it/remera.webp"
+    },
+    {
       "id": "joker-batman-dark-knight",
       "name": "Joker Batman Dark Knight",
       "category": "cine-series",
       "categoryName": "Cine y Series",
       "modelo": "/catalogo/cine-series/joker-batman-dark-knight/modelo.webp",
       "remera": "/catalogo/cine-series/joker-batman-dark-knight/remera.webp"
+    },
+    {
+      "id": "monstars-space-jam",
+      "name": "Monstars Space Jam",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/monstars-space-jam/modelo.webp",
+      "remera": "/catalogo/cine-series/monstars-space-jam/remera.webp"
+    },
+    {
+      "id": "mumm-rah-thundercats",
+      "name": "Mumm Rah Thundercats",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/mumm-rah-thundercats/modelo.webp",
+      "remera": "/catalogo/cine-series/mumm-rah-thundercats/remera.webp"
+    },
+    {
+      "id": "star-wars",
+      "name": "Star Wars",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/star-wars/modelo.webp",
+      "remera": "/catalogo/cine-series/star-wars/remera.webp"
+    },
+    {
+      "id": "stranger-things",
+      "name": "Stranger Things",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/stranger-things/modelo.webp",
+      "remera": "/catalogo/cine-series/stranger-things/remera.webp"
     },
     {
       "id": "ayrton-senna",
