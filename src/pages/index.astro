@@ -262,14 +262,23 @@ const base = import.meta.env.BASE_URL;
 }
 
   .instagram {
-    color: #aaa;
-    text-decoration: none;
-    font-size: 14px;
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #833ab4, #c13584, #e1306c, #f77737, #fcaf45);
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
 
-  .instagram:hover {
-    color: white;
-  }
+.instagram:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
 
   main {
     width: min(1400px, 90vw);
