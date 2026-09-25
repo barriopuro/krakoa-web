@@ -1,0 +1,893 @@
+---
+import catalogo from "../data/catalogo.json";
+
+const categories = [
+  { id: "todos", name: "Todos" },
+  ...catalogo.categories,
+];
+---
+
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>KRAKOA | REMERAS</title>
+  <link rel="icon" type="image/png" href="/logos/krakoalogo-isotipo.png" />
+
+  <meta
+    name="description"
+    content="KRAKOA — Catálogo de remeras inspiradas en anime, música, cine, series, deportes, videojuegos y cultura pop."
+  />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#111111" />
+
+  <meta property="og:title" content="KRAKOA | Remeras" />
+  <meta
+    property="og:description"
+    content="Catálogo de remeras inspiradas en anime, música, cine, series, deportes, videojuegos y cultura pop."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KRAKOA" />
+  <meta property="og:image" content="/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="KRAKOA | Remeras" />
+  <meta
+    name="twitter:description"
+    content="Catálogo de remeras inspiradas en anime, música, cine, series, deportes, videojuegos y cultura pop."
+  />
+</head>
+
+  <body>
+    <header class="site-header">
+      <a href="/" class="brand" aria-label="KRAKOA">
+  <img
+    class="logo-horizontal"
+    src="/logos/krakoalogo-horizontal.png"
+    alt="KRAKOA"
+  />
+
+  <img
+    class="logo-isotipo"
+    src="/logos/krakoalogo-isotipo.png"
+    alt=""
+    aria-hidden="true"
+  />
+</a>
+
+      <a
+        href="https://instagram.com/krakoa.sw"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="instagram"
+      >
+        Instagram
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+         <h1>CATALOGO.</h1>
+      </section>
+
+      <section class="catalog">
+        <div class="catalog-header">
+        
+
+          <div class="search-wrapper">
+            <input
+              id="search"
+              type="search"
+              placeholder="Buscar diseño..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <nav class="categories" aria-label="Categorías">
+          {
+            categories.map((category) => (
+              <button
+  class:list={[
+    "category-button",
+    { active: category.id === "todos" },
+  ]}
+  data-category={category.id}
+  style={`--category-color: ${category.color ?? "#888888"}`}
+>
+  <span class="category-dot"></span>
+  {category.name}
+</button>
+            ))
+          }
+        </nav>
+
+        <div id="products" class="products">
+          {
+            catalogo.products.map((product) => (
+              <article
+                class="product-card"
+                data-name={product.name.toLowerCase()}
+                data-category={product.category}
+              >
+                <button class="product-button" type="button">
+                  <div class="product-image">
+                    <img
+                      src={product.modelo}
+                      alt={`Remera ${product.name}`}
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="product-info">
+  <h3>{product.name}</h3>
+
+  <span
+    class="product-category"
+    style={`--category-color: ${
+      catalogo.categories.find(
+        (category) => category.id === product.category
+      )?.color ?? "#888888"
+    }`}
+  >
+    <i class="category-dot"></i>
+    {product.categoryName}
+  </span>
+</div>
+                </button>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+<div id="product-modal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop"></div>
+
+  <div class="modal-content" role="dialog" aria-modal="true">
+    <button
+      id="modal-close"
+      class="modal-close"
+      type="button"
+      aria-label="Cerrar"
+    >
+      ×
+    </button>
+
+    <button
+      id="modal-prev"
+      class="modal-arrow modal-prev"
+      type="button"
+      aria-label="Imagen anterior"
+    >
+      ‹
+    </button>
+
+    <div class="modal-image-wrapper">
+      <img id="modal-image" src="" alt="" />
+    </div>
+
+    <button
+      id="modal-next"
+      class="modal-arrow modal-next"
+      type="button"
+      aria-label="Imagen siguiente"
+    >
+      ›
+    </button>
+
+   <div class="modal-footer">
+    <div>
+      <h3 id="modal-title"></h3>
+    </div>
+
+   <div class="modal-actions">
+    <div id="modal-dots" class="modal-dots"></div>
+
+    <a
+      id="modal-whatsapp"
+      class="modal-whatsapp"
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Consultar por WhatsApp
+    </a>
+  </div>
+</div>
+  </div>
+</div>
+
+    </main>
+
+    <footer>
+      <span>KRAKOA</span>
+
+      <a
+        href="https://instagram.com/krakoa.sw"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @krakoa.sw
+      </a>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    margin: 0;
+    background: #0b0b0b;
+    color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .site-header {
+    width: 100%;
+    padding: 22px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #242424;
+  }
+
+ .brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-horizontal {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+.logo-isotipo {
+  display: none;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+  .instagram {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .instagram:hover {
+    color: white;
+  }
+
+  main {
+    width: min(1400px, 90vw);
+    margin: 0 auto;
+  }
+
+ .hero {
+  padding: 55px 0 45px;
+  }
+
+  .eyebrow {
+    margin: 0 0 18px;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: #888;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(48px, 9vw, 120px);
+    line-height: 0.88;
+    letter-spacing: -0.065em;
+    font-weight: 900;
+  }
+
+  .intro {
+    margin: 32px 0 0;
+    color: #999;
+    font-size: 15px;
+  }
+
+  .catalog {
+    padding-bottom: 100px;
+  }
+
+  .catalog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: -0.03em;
+  }
+
+  .search-wrapper input {
+    width: 240px;
+    padding: 11px 14px;
+    border: 1px solid #333;
+    border-radius: 0;
+    outline: none;
+    background: #111;
+    color: white;
+    font-size: 14px;
+  }
+
+  .search-wrapper input:focus {
+    border-color: #777;
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 35px;
+  }
+
+ .category-button {
+  border: 1px solid #333;
+  background: transparent;
+  color: #999;
+  padding: 9px 15px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s ease;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--category-color);
+  flex-shrink: 0;
+}
+
+.category-button:hover,
+.category-button.active {
+  border-color: var(--category-color);
+  color: white;
+}
+
+.category-button.active .category-dot {
+  box-shadow: 0 0 8px var(--category-color);
+}
+
+  
+ .products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+  .product-card {
+    min-width: 0;
+  }
+
+  .product-button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .product-image {
+    aspect-ratio: 1 / 1.18;
+    background: #141414;
+    overflow: hidden;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+
+  .product-button:hover .product-image img {
+    transform: scale(1.025);
+  }
+
+  .product-info {
+    padding: 12px 2px 0;
+  }
+
+  .product-info h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+.product-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #777;
+  font-size: 12px;
+}
+
+.product-category .category-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--category-color);
+  flex-shrink: 0;
+}
+
+  footer {
+    padding: 30px 5vw;
+    border-top: 1px solid #242424;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 12px;
+  }
+
+  footer a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .products {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 700px) {
+    .site-header {
+      padding: 18px 5vw;
+    }
+
+    .hero {
+      padding: 40px 0 35px;
+    }
+
+    .catalog-header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .search-wrapper,
+    .search-wrapper input {
+      width: 100%;
+    }
+
+    .categories {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      padding-bottom: 5px;
+    }
+
+    .category-button {
+      white-space: nowrap;
+    }
+	.logo-horizontal {
+  display: none;
+}
+
+.logo-isotipo {
+  display: block;
+}
+  }
+    .modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+  }
+
+  .modal.open {
+    display: block;
+  }
+
+  .modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(8px);
+  }
+
+  .modal-content {
+    position: relative;
+    width: min(94vw, 1100px);
+    height: min(94vh, 900px);
+    margin: 3vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .modal-image-wrapper {
+    width: 100%;
+    height: calc(100% - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .modal-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 48px;
+    height: 64px;
+    border: 0;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    font-size: 48px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .modal-arrow:hover,
+  .modal-close:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .modal-prev {
+    left: 0;
+  }
+
+  .modal-next {
+    right: 0;
+  }
+
+  .modal-footer {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 55px 0;
+  }
+
+  .modal-footer h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+  }
+
+  .modal-counter {
+    color: #777;
+    font-size: 12px;
+  }
+
+  .modal-dots {
+    display: flex;
+    gap: 7px;
+  }
+
+  .modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.modal-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.modal-whatsapp:hover {
+  background: #35e276;
+  transform: translateY(-1px);
+}
+
+  :global(.modal-dot) {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+    background: #555;
+    cursor: pointer;
+  }
+
+:global(.modal-dot.active) {
+  background: var(--category-color) !important;
+  box-shadow: 0 0 7px var(--category-color);
+}
+
+  :global(body.modal-open) {
+    overflow: hidden;
+  }
+
+  @media (max-width: 700px) {
+    .modal-content {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .modal-image-wrapper {
+      height: calc(100% - 85px);
+      padding: 50px 45px 10px;
+    }
+
+    .modal-arrow {
+      width: 38px;
+      height: 55px;
+      font-size: 40px;
+    }
+
+    .modal-footer {
+      height: 85px;
+      padding: 10px 45px 15px;
+    }
+
+    .modal-footer h3 {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<script>
+  const searchInput = document.querySelector("#search");
+  const categoryButtons = document.querySelectorAll(".category-button");
+  const products = document.querySelectorAll(".product-card");
+
+  let activeCategory = "todos";
+
+  function filterProducts() {
+    const search = searchInput.value.toLowerCase().trim();
+
+    products.forEach((product) => {
+      const name = product.dataset.name ?? "";
+      const category = product.dataset.category ?? "";
+
+      const matchesSearch = name.includes(search);
+      const matchesCategory =
+        activeCategory === "todos" || category === activeCategory;
+
+      product.style.display =
+        matchesSearch && matchesCategory ? "" : "none";
+    });
+  }
+
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      categoryButtons.forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+
+      activeCategory = button.dataset.category ?? "todos";
+
+      filterProducts();
+    });
+  });
+
+  searchInput.addEventListener("input", filterProducts);
+
+
+  // -------------------------
+  // MODAL DE PRODUCTO
+  // -------------------------
+
+  const modal = document.querySelector("#product-modal");
+  const modalImage = document.querySelector("#modal-image");
+  const modalTitle = document.querySelector("#modal-title");
+  const modalWhatsapp = document.querySelector("#modal-whatsapp");
+  const modalCounter = document.querySelector("#modal-counter");
+  const modalDots = document.querySelector("#modal-dots");
+  const modalClose = document.querySelector("#modal-close");
+  const modalPrev = document.querySelector("#modal-prev");
+  const modalNext = document.querySelector("#modal-next");
+  const modalBackdrop = document.querySelector(".modal-backdrop");
+
+  let currentImages = [];
+  let currentImageIndex = 0;
+
+
+  function openModal(product) {
+    const name = product.querySelector("h3")?.textContent ?? "";
+
+    const category = product.querySelector(".product-category");
+const categoryColor =
+  category?.style.getPropertyValue("--category-color") ?? "#ffffff";
+
+modal.style.setProperty("--category-color", categoryColor);
+
+    const image = product.querySelector("img");
+
+    if (!image) return;
+
+    const modelo = image.getAttribute("src");
+
+    const remera = modelo.replace("/modelo.", "/remera.");
+
+    const productPath = modelo.substring(
+      0,
+      modelo.lastIndexOf("/")
+    );
+
+    currentImages = [
+      {
+        src: modelo,
+        label: "Modelo",
+      },
+      {
+        src: remera,
+        label: "Remera",
+      },
+      {
+        src: "/talles/oversize.jpg",
+        label: "Talles Oversize",
+      },
+      {
+        src: "/talles/regular.jpg",
+        label: "Talles Regular",
+      },
+    ];
+
+    currentImageIndex = 0;
+
+    modalTitle.textContent = name;
+
+    const message = `Hola! Quería consultar por la remera de ${name}.`;
+modalWhatsapp.href = `https://wa.me/5491132372306?text=${encodeURIComponent(message)}`;
+
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+
+    document.body.classList.add("modal-open");
+
+    renderModalImage();
+  }
+
+
+  function closeModal() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+
+    document.body.classList.remove("modal-open");
+  }
+
+
+  function renderModalImage() {
+    const current = currentImages[currentImageIndex];
+
+    if (!current) return;
+
+    modalImage.src = current.src;
+    modalImage.alt = `${modalTitle.textContent} — ${current.label}`;
+
+    
+    modalDots.innerHTML = "";
+
+    currentImages.forEach((image, index) => {
+  const dot = document.createElement("button");
+
+  dot.type = "button";
+dot.className = "modal-dot";
+
+if (index === currentImageIndex) {
+  dot.classList.add("active");
+}
+  dot.setAttribute(
+    "aria-label",
+    `Ver ${image.label}`
+  );
+
+  dot.addEventListener("click", () => {
+    currentImageIndex = index;
+    renderModalImage();
+  });
+
+  modalDots.appendChild(dot);
+});
+  }
+
+
+  function showPreviousImage() {
+    currentImageIndex =
+      (currentImageIndex - 1 + currentImages.length) %
+      currentImages.length;
+
+    renderModalImage();
+  }
+
+
+  function showNextImage() {
+    currentImageIndex =
+      (currentImageIndex + 1) %
+      currentImages.length;
+
+    renderModalImage();
+  }
+
+
+  products.forEach((product) => {
+    const button = product.querySelector(".product-button");
+
+    button?.addEventListener("click", () => {
+      openModal(product);
+    });
+  });
+
+
+  modalClose.addEventListener("click", closeModal);
+
+  modalBackdrop.addEventListener("click", closeModal);
+
+  modalPrev.addEventListener("click", showPreviousImage);
+
+  modalNext.addEventListener("click", showNextImage);
+
+
+  document.addEventListener("keydown", (event) => {
+    if (!modal.classList.contains("open")) return;
+
+    if (event.key === "Escape") {
+      closeModal();
+    }
+
+    if (event.key === "ArrowLeft") {
+      showPreviousImage();
+    }
+
+    if (event.key === "ArrowRight") {
+      showNextImage();
+    }
+  });
+</script>

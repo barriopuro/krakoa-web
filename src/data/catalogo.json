@@ -1,0 +1,425 @@
+{
+  "categories": [
+    {
+      "id": "anime",
+      "name": "Anime",
+      "color": "#e53935"
+    },
+    {
+      "id": "cine-series",
+      "name": "Cine y Series",
+      "color": "#f2c94c"
+    },
+    {
+      "id": "comics",
+      "name": "Comics",
+      "color": "#E84393"
+    },
+    {
+      "id": "deportes",
+      "name": "Deportes",
+      "color": "#f2994a"
+    },
+    {
+      "id": "musica",
+      "name": "Música",
+      "color": "#2f80ed"
+    },
+    {
+      "id": "otros",
+      "name": "Otros",
+      "color": "#bb86fc"
+    },
+    {
+      "id": "videojuegos",
+      "name": "Videojuegos",
+      "color": "#27ae60"
+    }
+  ],
+  "products": [
+    {
+      "id": "akira",
+      "name": "Akira",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/akira/modelo.jpg",
+      "remera": "/catalogo/anime/akira/remera.jpg"
+    },
+    {
+      "id": "akira-2",
+      "name": "Akira 2",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/akira-2/modelo.jpg",
+      "remera": "/catalogo/anime/akira-2/remera.jpg"
+    },
+    {
+      "id": "death-note",
+      "name": "Death Note",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/death-note/modelo.jpg",
+      "remera": "/catalogo/anime/death-note/remera.jpg"
+    },
+    {
+      "id": "death-note-2",
+      "name": "Death Note 2",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/death-note-2/modelo.jpg",
+      "remera": "/catalogo/anime/death-note-2/remera.jpg"
+    },
+    {
+      "id": "demon-slayer",
+      "name": "Demon Slayer",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/demon-slayer/modelo.jpg",
+      "remera": "/catalogo/anime/demon-slayer/remera.jpg"
+    },
+    {
+      "id": "demon-slayer-2",
+      "name": "Demon Slayer 2",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/demon-slayer-2/modelo.jpg",
+      "remera": "/catalogo/anime/demon-slayer-2/remera.jpg"
+    },
+    {
+      "id": "erosenin-naruto",
+      "name": "Erosenin Naruto",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/erosenin-naruto/modelo.jpg",
+      "remera": "/catalogo/anime/erosenin-naruto/remera.jpg"
+    },
+    {
+      "id": "evangelion",
+      "name": "Evangelion",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/evangelion/modelo.jpg",
+      "remera": "/catalogo/anime/evangelion/remera.jpg"
+    },
+    {
+      "id": "evangelion-2",
+      "name": "Evangelion 2",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/evangelion-2/modelo.jpg",
+      "remera": "/catalogo/anime/evangelion-2/remera.jpg"
+    },
+    {
+      "id": "evangelion-3",
+      "name": "Evangelion 3",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/evangelion-3/modelo.jpg",
+      "remera": "/catalogo/anime/evangelion-3/remera.jpg"
+    },
+    {
+      "id": "gohan-dragon-ball-z",
+      "name": "Gohan Dragon Ball Z",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/gohan-dragon-ball-z/modelo.jpg",
+      "remera": "/catalogo/anime/gohan-dragon-ball-z/remera.jpg"
+    },
+    {
+      "id": "goku-dragon-ball",
+      "name": "Goku Dragon Ball",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/goku-dragon-ball/modelo.jpg",
+      "remera": "/catalogo/anime/goku-dragon-ball/remera.jpg"
+    },
+    {
+      "id": "hellsing",
+      "name": "Hellsing",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/hellsing/modelo.jpg",
+      "remera": "/catalogo/anime/hellsing/remera.jpg"
+    },
+    {
+      "id": "luffy-one-piece",
+      "name": "Luffy One Piece",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/luffy-one-piece/modelo.jpg",
+      "remera": "/catalogo/anime/luffy-one-piece/remera.jpg"
+    },
+    {
+      "id": "one-piece",
+      "name": "One Piece",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/one-piece/modelo.jpg",
+      "remera": "/catalogo/anime/one-piece/remera.jpg"
+    },
+    {
+      "id": "piccoro-dragon-ball-z",
+      "name": "Piccoro Dragon Ball Z",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/piccoro-dragon-ball-z/modelo.jpg",
+      "remera": "/catalogo/anime/piccoro-dragon-ball-z/remera.jpg"
+    },
+    {
+      "id": "slam-dunk",
+      "name": "Slam Dunk",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/slam-dunk/modelo.jpg",
+      "remera": "/catalogo/anime/slam-dunk/remera.jpg"
+    },
+    {
+      "id": "squarturtle-pokemon",
+      "name": "Squarturtle Pokemon",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/squarturtle-pokemon/modelo.jpg",
+      "remera": "/catalogo/anime/squarturtle-pokemon/remera.jpg"
+    },
+    {
+      "id": "tao-pai-pai-dragon-ball",
+      "name": "Tao Pai Pai Dragon Ball",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/tao-pai-pai-dragon-ball/modelo.jpg",
+      "remera": "/catalogo/anime/tao-pai-pai-dragon-ball/remera.jpg"
+    },
+    {
+      "id": "uchiha-clan-naruto",
+      "name": "Uchiha Clan Naruto",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/uchiha-clan-naruto/modelo.jpg",
+      "remera": "/catalogo/anime/uchiha-clan-naruto/remera.jpg"
+    },
+    {
+      "id": "vegeta-dragon-ball-z",
+      "name": "Vegeta Dragon Ball Z",
+      "category": "anime",
+      "categoryName": "Anime",
+      "modelo": "/catalogo/anime/vegeta-dragon-ball-z/modelo.jpg",
+      "remera": "/catalogo/anime/vegeta-dragon-ball-z/remera.jpg"
+    },
+    {
+      "id": "joker-batman-dark-knight",
+      "name": "Joker Batman Dark Knight",
+      "category": "cine-series",
+      "categoryName": "Cine y Series",
+      "modelo": "/catalogo/cine-series/joker-batman-dark-knight/modelo.jpg",
+      "remera": "/catalogo/cine-series/joker-batman-dark-knight/remera.jpg"
+    },
+    {
+      "id": "ayrton-senna",
+      "name": "Ayrton Senna",
+      "category": "deportes",
+      "categoryName": "Deportes",
+      "modelo": "/catalogo/deportes/ayrton-senna/modelo.jpg",
+      "remera": "/catalogo/deportes/ayrton-senna/remera.jpg"
+    },
+    {
+      "id": "kobe-bryant",
+      "name": "Kobe Bryant",
+      "category": "deportes",
+      "categoryName": "Deportes",
+      "modelo": "/catalogo/deportes/kobe-bryant/modelo.jpg",
+      "remera": "/catalogo/deportes/kobe-bryant/remera.jpg"
+    },
+    {
+      "id": "kobe-bryant-2",
+      "name": "Kobe Bryant 2",
+      "category": "deportes",
+      "categoryName": "Deportes",
+      "modelo": "/catalogo/deportes/kobe-bryant-2/modelo.jpg",
+      "remera": "/catalogo/deportes/kobe-bryant-2/remera.jpg"
+    },
+    {
+      "id": "manu-ginobili",
+      "name": "Manu Ginobili",
+      "category": "deportes",
+      "categoryName": "Deportes",
+      "modelo": "/catalogo/deportes/manu-ginobili/modelo.jpg",
+      "remera": "/catalogo/deportes/manu-ginobili/remera.jpg"
+    },
+    {
+      "id": "maradona",
+      "name": "Maradona",
+      "category": "deportes",
+      "categoryName": "Deportes",
+      "modelo": "/catalogo/deportes/maradona/modelo.jpg",
+      "remera": "/catalogo/deportes/maradona/remera.jpg"
+    },
+    {
+      "id": "maradona-2",
+      "name": "Maradona 2",
+      "category": "deportes",
+      "categoryName": "Deportes",
+      "modelo": "/catalogo/deportes/maradona-2/modelo.jpg",
+      "remera": "/catalogo/deportes/maradona-2/remera.jpg"
+    },
+    {
+      "id": "messi",
+      "name": "Messi",
+      "category": "deportes",
+      "categoryName": "Deportes",
+      "modelo": "/catalogo/deportes/messi/modelo.jpg",
+      "remera": "/catalogo/deportes/messi/remera.jpg"
+    },
+    {
+      "id": "messi-2",
+      "name": "Messi 2",
+      "category": "deportes",
+      "categoryName": "Deportes",
+      "modelo": "/catalogo/deportes/messi-2/modelo.jpg",
+      "remera": "/catalogo/deportes/messi-2/remera.jpg"
+    },
+    {
+      "id": "nicolino-locche",
+      "name": "Nicolino Locche",
+      "category": "deportes",
+      "categoryName": "Deportes",
+      "modelo": "/catalogo/deportes/nicolino-locche/modelo.jpg",
+      "remera": "/catalogo/deportes/nicolino-locche/remera.jpg"
+    },
+    {
+      "id": "a-perfect-circle",
+      "name": "A Perfect Circle",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/a-perfect-circle/modelo.jpg",
+      "remera": "/catalogo/musica/a-perfect-circle/remera.jpg"
+    },
+    {
+      "id": "alice-in-chains",
+      "name": "Alice In Chains",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/alice-in-chains/modelo.jpg",
+      "remera": "/catalogo/musica/alice-in-chains/remera.jpg"
+    },
+    {
+      "id": "cypress-hill",
+      "name": "Cypress Hill",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/cypress-hill/modelo.jpg",
+      "remera": "/catalogo/musica/cypress-hill/remera.jpg"
+    },
+    {
+      "id": "foo-fighters",
+      "name": "Foo Fighters",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/foo-fighters/modelo.jpg",
+      "remera": "/catalogo/musica/foo-fighters/remera.jpg"
+    },
+    {
+      "id": "gorillaz",
+      "name": "Gorillaz",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/gorillaz/modelo.jpg",
+      "remera": "/catalogo/musica/gorillaz/remera.jpg"
+    },
+    {
+      "id": "gustavo-cerati",
+      "name": "Gustavo Cerati",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/gustavo-cerati/modelo.jpg",
+      "remera": "/catalogo/musica/gustavo-cerati/remera.jpg"
+    },
+    {
+      "id": "indio-solari",
+      "name": "Indio Solari",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/indio-solari/modelo.jpg",
+      "remera": "/catalogo/musica/indio-solari/remera.jpg"
+    },
+    {
+      "id": "jimi-hendrix",
+      "name": "Jimi Hendrix",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/jimi-hendrix/modelo.jpg",
+      "remera": "/catalogo/musica/jimi-hendrix/remera.jpg"
+    },
+    {
+      "id": "lemmy-kilmister",
+      "name": "Lemmy Kilmister",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/lemmy-kilmister/modelo.jpg",
+      "remera": "/catalogo/musica/lemmy-kilmister/remera.jpg"
+    },
+    {
+      "id": "linkin-park",
+      "name": "Linkin Park",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/linkin-park/modelo.jpg",
+      "remera": "/catalogo/musica/linkin-park/remera.jpg"
+    },
+    {
+      "id": "michael-jackson",
+      "name": "Michael Jackson",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/michael-jackson/modelo.jpg",
+      "remera": "/catalogo/musica/michael-jackson/remera.jpg"
+    },
+    {
+      "id": "michael-jackson-2",
+      "name": "Michael Jackson 2",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/michael-jackson-2/modelo.jpg",
+      "remera": "/catalogo/musica/michael-jackson-2/remera.jpg"
+    },
+    {
+      "id": "the-beatles",
+      "name": "The Beatles",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/the-beatles/modelo.jpg",
+      "remera": "/catalogo/musica/the-beatles/remera.jpg"
+    },
+    {
+      "id": "tyk",
+      "name": "Tyk",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/tyk/modelo.jpg",
+      "remera": "/catalogo/musica/tyk/remera.jpg"
+    },
+    {
+      "id": "wu-tang",
+      "name": "Wu Tang",
+      "category": "musica",
+      "categoryName": "Música",
+      "modelo": "/catalogo/musica/wu-tang/modelo.jpg",
+      "remera": "/catalogo/musica/wu-tang/remera.jpg"
+    },
+    {
+      "id": "las-malvinas-son-argentinas",
+      "name": "Las Malvinas Son Argentinas",
+      "category": "otros",
+      "categoryName": "Otros",
+      "modelo": "/catalogo/otros/las-malvinas-son-argentinas/modelo.jpg",
+      "remera": "/catalogo/otros/las-malvinas-son-argentinas/remera.jpg"
+    },
+    {
+      "id": "god-of-war",
+      "name": "God Of War",
+      "category": "videojuegos",
+      "categoryName": "Videojuegos",
+      "modelo": "/catalogo/videojuegos/god-of-war/modelo.jpg",
+      "remera": "/catalogo/videojuegos/god-of-war/remera.jpg"
+    }
+  ]
+}
